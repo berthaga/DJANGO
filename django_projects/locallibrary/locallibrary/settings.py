@@ -76,8 +76,16 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+       'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'librarydb',
+        'USER':'root',
+        'PASSWORD':'ach9.a0199',
+        'HOST':'localhost',
+        'PORT':'3306',
+        'OPTIONS': {
+            # Tell MySQLdb to connect with 'utf8mb4' character set
+            'charset': 'utf8mb4',
+        },
     }
 }
 
